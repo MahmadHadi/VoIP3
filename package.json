@@ -6,7 +6,7 @@
     "scripts": {
         "postinstall": "chmod +x ./node_modules/.bin/concurrently",
         "server": "node server.js",
-        "peerjs": "peerjs --port 3001",
+        "peerjs": "peerjs --port $PORT",
         "start": "npx concurrently \"npm run server\" \"npm run peerjs\""
     },
     "keywords": [],

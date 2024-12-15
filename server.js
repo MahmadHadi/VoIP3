@@ -4,7 +4,9 @@ const server = require("http").Server(app);
 const io = require("socket.io")(server);
 const { v4: uuidv4 } = require("uuid");
 
-const port = 3000;
+// const port = 3000;
+const PORT = process.env.PORT || 3000; // Default to 3000 for local dev
+
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -30,4 +32,4 @@ io.on("connection", (socket) => {
 
 });
 
-server.listen(port);
+server.listen(PORT);

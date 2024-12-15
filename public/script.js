@@ -2,7 +2,7 @@ const socket = io("/");
 const videoGrid = document.querySelector("#video-grid");
 const myPeer = new Peer(undefined, {
     host: "/",
-    port: "3001",
+    port: "3001"
 });
 
 socket.on("user-disconnected", (userId) => {

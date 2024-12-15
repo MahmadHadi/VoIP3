@@ -15,7 +15,7 @@ myPeer.on("open", (id) => {
 });
 
 const myVideo = document.createElement("video");
-myVideo.muted = false;
+myVideo.muted = true;
 
 const peers = {};
 

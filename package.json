@@ -4,10 +4,10 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "server": "node server.js",
+        "postinstall": "chmod +x ./node_modules/.bin/concurrently",
+        "server": "nodemon server.js",
         "peerjs": "peerjs --port 3001",
-        "start": "concurrently \"npm run server\" \"npm run peerjs\""
-
+        "start": "npx concurrently \"npm run server\" \"npm run peerjs\""
     },
     "keywords": [],
     "author": "",

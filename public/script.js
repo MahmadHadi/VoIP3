@@ -1,14 +1,8 @@
 const socket = io("/");
 const videoGrid = document.querySelector("#video-grid");
-// const myPeer = new Peer(undefined, {
-//     host: "/",
-//     port: "3001"
-// });
 const myPeer = new Peer(undefined, {
-    host: 'https://voip3.onrender.com', // Replace with your Render URL
-    port: 443, // Render forces HTTPS on live services
-    secure: true,
-    path: '/peerjs'
+    host: "your-service-name.onrender.com",
+    port: "3001"
 });
 
 socket.on("user-disconnected", (userId) => {
